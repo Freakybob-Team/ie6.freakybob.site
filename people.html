@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A place for Freakybob.">
+    <meta content="Freakybob" property="og:title" />
+    <meta content="These people helped in some way, shape, or form" property="og:description" />
+    <meta content="https://freakybob.site/people" property="og:url" />
+    <meta content="https://github.com/5quirre1/Freakybob.site/blob/main/Snapshots/Screenshot%202024-08-29%2012.38.20%20AM.png" property="og:image" />
+    <meta content="#006b79" name="theme-color" />
+    <link rel="icon" type="image/x-icon" href="images/Yay!!.ico">
+    <title>Others</title>
+    <style>
+        body {
+            background-color: #2cfd9b; 
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background: none;
+            border: 1px solid #555;
+            color: #555;
+            margin: 0 15px;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        .button-container button:hover {
+            color: #6f0279;
+            background-color: #f3ef14;
+        }
+        .contributors {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contributors button {
+            background-color: #d6c20b;
+            border: none;
+            color: #6d5a05;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0 10px;
+        }
+        .contributors button:hover {
+            color: #f106f1;
+        }
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+        audio {
+            display: none;
+        }
+        #main-image {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img id="main-image" src="images/giancafort.jpeg" alt="Main Image">
+    <h1>People who didn't help but still deserve to be here :)</h1>
+    <audio 
+        src="audio/copyright-free-background-music-no-copyright-music-216517.mp3" 
+        loop 
+        autoplay>
+    </audio>
+    <div class="button-container">
+        <a href="https://freakybob.site">
+            <button>Go back to Main Website :3</button>
+        </a>
+    </div>
+
+    <div class="contributors">
+        <button onclick="showInfo('Saam')">Saam</button>
+        <button onclick="showInfo('KM')">KM</button>
+        <button onclick="showInfo('Noah')">Noah</button>
+        <button onclick="showInfo('Gianca')">Gianca</button>
+        <button onclick="showInfo('George')">Stanford</button>
+        <button onclick="showInfo('Nomaakip')">Nomaakip</button>
+        <button onclick="showInfo('Nintendofan64')">Nintendofan64</button>
+        <button onclick="showInfo('Lapis')">Lapis</button>
+        <button onclick="showInfo('Mpax235')">Mpax235</button>
+    </div>
+    <div id="description" class="description"></div>
+
+    <div class="image-container" id="person-image" style="display: none;">
+        <img id="personImage" alt="Person Image">
+    </div>
+
+    <script>
+var giancaClickCount = 0;
+var isGiancaReplaced = false;
+var kmClickCount = 0;
+var isKMReplaced = false;
+
+function showInfo(name) {
+    var descriptions = {
+        'Saam': 'Saam is cool yay!',
+        'KM': 'Is now officially cool! (herbert simp)',
+        'Noah': 'Noah is awesome frfr',
+        'Gianca': 'Fortnite Playing Twi-I mean, Really good at Fortnite!',
+        'George': 'The Coolest Crackhead On Earth!',
+        'Nomaakip': 'Has been learning html which is awesome! Hope to see them on the team!',
+        'Nintendofan64': 'freakybob found my address and posted it on 4chan send help',
+        'Lapis': 'Is a really nice and cool person! (KiKi Simp)',
+        'Mpax235': 'Added Garrys song in the Music Gallery!',
+    };
+
+    var images = {
+        'Saam': 'images/Saam.webp',
+        'KM': isKMReplaced ? 'images/KM.png' : 'images/KM.webp',
+        'Noah': 'images/Noah.webp',
+        'Gianca': isGiancaReplaced ? 'images/giancafort.jpeg' : 'images/giancanew.png',
+        'George': 'images/George.png',
+        'Nomaakip': 'images/Nomaakip.png',
+        'Nintendofan64': 'images/Nintendofan.png',
+        'Lapis': 'images/10129038.jpg',
+        'Mpax235': 'images/Mpax.png',
+    };
+
+    var descriptionDiv = document.getElementById('description');
+    var personImage = document.getElementById('person-image');
+    var image = document.getElementById('personImage');
+
+    descriptionDiv.innerText = descriptions[name] || 'Information not available.';
+    image.src = images[name] || '';
+    personImage.style.display = (name in images) ? 'block' : 'none';
+
+    if (name === 'Gianca') {
+        image.onclick = handleGiancaImageClick; 
+    } else if (name === 'KM') {
+        image.onclick = handleKMImageClick;
+    }
+}
+
+function handleGiancaImageClick() {
+    if (isGiancaReplaced) return;
+
+    giancaClickCount++;
+    if (giancaClickCount >= 10) {
+        var image = document.getElementById('personImage');
+        image.src = 'images/giancafort.jpeg';
+        isGiancaReplaced = true;
+    }
+}
+
+function handleKMImageClick() {
+    if (isKMReplaced) return;
+
+    kmClickCount++;
+    if (kmClickCount >= 10) {
+        var image = document.getElementById('personImage');
+        image.src = 'images/KM.png';
+        isKMReplaced = true;
+    }
+}
+    </script>
+</body>
+</html>
