@@ -1,2 +1,2 @@
-# Freakybob.siteIE6
-Freakybob.site that supports IE 6
+# ie6.freakybob.site
+Freakybob.site that supports IE6.
