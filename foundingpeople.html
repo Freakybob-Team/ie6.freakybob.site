@@ -104,7 +104,7 @@
                 'Wish': 'images/wish.png',
                 'Hater': 'images/twitterhater.webp',
             };
-
+// IE 6 doesn't support WEBP
             document.getElementById('description').innerText = descriptions[name] || 'Information not available.';
             document.getElementById('image').src = images[name] || '';
             document.getElementById('person-image').style.display = (name in images) ? 'block' : 'none';
