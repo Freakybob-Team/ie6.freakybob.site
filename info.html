@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Info page :3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A place for Freakybob.">
+    <meta content="Info Page :3" property="og:title" />
+    <meta content="Infromation about freakybob.site!" property="og:description" />
+    <meta content="https://freakybob.site/info" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/Freakybob-Team/Freakybob.site/main/images/Freaky_Bob_info.png" property="og:image" />
+    <meta content="#006b79" data-react-helmet="true" name="theme-color" />
+    <link rel="icon" type="image/png" href="images/Freaky_Bob_info.ico">
+    <style>
+        body {
+            background-color: rgb(5, 105, 105);
+        }
+        h1 {
+            text-align: center;
+            color: rgb(217, 224, 16);
+        }
+        p {
+            text-align: center;
+            color: rgb(206, 190, 190);
+        }
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            color: #dbde06;
+        }
+        h3 {
+            text-align: center;
+            font-size: 40px;
+            color: #dbde06;
+            margin-top: -50px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background: none;
+            border: none;
+            color: #e7d915;
+            margin: 0 15px;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 2px solid #c107b5;
+        }
+        .button-container button:hover {
+            color: #0f000f;
+            background-color: #f3ef14;
+        }
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 40px;
+        }
+        #freakybob-orgin, #freakybob-found {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        #freakybob-found {
+            width: 320px;
+        }
+        #bought-freakybob {
+            margin-left: 20px;
+            width: 320px;
+            margin-top: 40px;
+        }
+        .carousel-button {
+            background-color: #c107b5;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .carousel-button:hover {
+            background-color: #f3ef14;
+            color: #0f000f;
+        }
+        #carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 120px;
+        }
+        #carousel {
+            display: flex;
+            overflow: hidden;
+            width: 400px;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-images img {
+            width: 400px;
+            height: auto;
+            cursor: pointer;
+        }
+        #para1, #para2, #para3 {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bede09;
+        }
+        #para4 {
+            color: rgb(2, 254, 250);
+            font-size: 20px;
+        }
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>This page looks better on a laptop or a desktop. Mobile is still in Development :3</p>
+    <strong><h1>Welcome to Freakybob.site</h1></strong>
+    <div class="button-container">
+        <a href="index.html">
+            <button>Go back to main website :3</button>
+        </a>
+    </div>
+    <strong><p>Since you're here, you probably want to know what this is about :3</p></strong>
+    <h2>freakybob.site is a website that was created by <a href="https://github.com/5quirre1" id="squirre1">5quirre1</a> and <a href="https://github.com/wish13yt" id="wish">wish13yt</a>. This all started from Wish mentioning a "freakybob" domain. Everyone was looking at domains until Squirrel found a domain on a domain website. The domain was "freakybob.site" for $4.00. Squirrel bought it almost instantly starting the well deserved birth of freakybob.site!</h2>
+
+    <div class="content-wrapper">
+        <div class="image-container">
+            <img src="images/freakyboborigin.png" id="freakybob-orgin" alt="freakybob origin">
+            <strong><p id="para1">A screenshot of Wish saying "steam gift 50$ - freakybob.com" which inspired Squirrel to buy and create freakybob.site</p></strong>
+            <img src="images/Foundfreakybob.site.png" id="freakybob-found" alt="Found freakybob site">
+            <strong><p id="para2">A screenshot of Squirrel finding the domain "freakybob.site"</p></strong>
+            <img src="images/bought.png" id="bought-freakybob" alt="bought-freakybob">
+            <strong><p id="para3">A screenshot of Squirrel showing that he bought freakybob.site</p></strong>
+        </div>
+    </div>
+<!--I FEEL SO FREAKY JUST LIKE FREAKYBOB!!!-->
+    <div id="image-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Enlarged image">
+    </div>
+<strong><h3>Can this website get taken down by Viacom, Nickolodeon or Nintendo?</h3></strong>
+<p id="para4">We are not using any copyrighted music, images, or videos (YouTube embeds) in this website. The only copyrighted music we have used throughout the website is Wii U soundtracks which is licensed by Nintendo. It would be very rare for the website to be taken down by Nintendo but knowing the way Nintendo acts, it could be very possible. If the website were to be taken down for any reason, we would find a way to keep it up without doing anything bad.</p>
+</body>
+</html>
+
+
