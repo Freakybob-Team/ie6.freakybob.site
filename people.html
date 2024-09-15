@@ -94,7 +94,7 @@
         <button onclick="showInfo('KM')">KM</button>
         <button onclick="showInfo('Noah')">Noah</button>
         <button onclick="showInfo('Gianca')">Gianca</button>
-        <button onclick="showInfo('George')">Stanford</button>
+        <button onclick="showInfo('George')">George</button>
         <button onclick="showInfo('Nintendofan64')">Nintendofan64</button>
         <button onclick="showInfo('Lapis')">Lapis</button>
     </div>
@@ -109,6 +109,8 @@ var giancaClickCount = 0;
 var isGiancaReplaced = false;
 var kmClickCount = 0;
 var isKMReplaced = false;
+var lapisClickCount = 0;
+var isLapisReplaced = false;
 
 function showInfo(name) {
     var descriptions = {
@@ -128,7 +130,7 @@ function showInfo(name) {
         'Gianca': isGiancaReplaced ? 'images/pfps/giancafort.jpeg' : 'images/pfps/giancanew.png',
         'George': 'images/pfps/George.png',
         'Nintendofan64': 'images/pfps/Nintendofan.png',
-        'Lapis': 'images/pfps/10129038.jpg',
+        'Lapis': isLapisReplaced ? 'images/pfps/Lapis.png' : 'images/pfps/10129038.jpg',
     };
 
     var descriptionDiv = document.getElementById('description');
@@ -143,6 +145,8 @@ function showInfo(name) {
         image.onclick = handleGiancaImageClick; 
     } else if (name === 'KM') {
         image.onclick = handleKMImageClick;
+    } else if (name === 'Lapis') {
+        image.onclick = handleLapisImageClick;
     }
 }
 
@@ -152,7 +156,7 @@ function handleGiancaImageClick() {
     giancaClickCount++;
     if (giancaClickCount >= 10) {
         var image = document.getElementById('personImage');
-        image.src = 'images/giancafort.jpeg';
+        image.src = 'images/pfps/giancafort.jpeg';
         isGiancaReplaced = true;
     }
 }
@@ -163,8 +167,19 @@ function handleKMImageClick() {
     kmClickCount++;
     if (kmClickCount >= 10) {
         var image = document.getElementById('personImage');
-        image.src = 'images/KM.png';
+        image.src = 'images/pfps/KM.png';
         isKMReplaced = true;
+    }
+}
+
+function handleLapisImageClick() {
+    if (isLapisReplaced) return;
+
+    lapisClickCount++;
+    if (lapisClickCount >= 10) {
+        var image = document.getElementById('personImage');
+        image.src = 'images/pfps/Lapis.png';
+        isLapisReplaced = true;
     }
 }
     </script>
